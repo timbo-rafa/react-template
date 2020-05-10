@@ -10,10 +10,11 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import HomeIcon from '@material-ui/icons/Home';
+import {Link as RouterLink} from "react-router-dom";
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem button component={RouterLink} to="/dashboard">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
@@ -67,11 +68,11 @@ export const secondaryListItems = (
       </ListItemIcon>
       <ListItemText primary="Year-end sale" />
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <HomeIcon/>
-      </ListItemIcon>
-      <ListItemText primary="Simple Page"></ListItemText>
+    <ListItem button component={RouterLink} to="/simple_page">
+        <ListItemIcon>
+          <HomeIcon />
+        </ListItemIcon>
+        <ListItemText primary="Simple Page" />
     </ListItem>
   </div>
 );
