@@ -1,7 +1,7 @@
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
-import App from "./App";
+import Deposits from "./Deposits";
 
 let container = null;
 beforeEach(() => {
@@ -17,9 +17,10 @@ afterEach(() => {
   container = null;
 });
 
-it("renders root", () => {
+it("renders Recent Deposits", () => {
   act(() => {
-    render(<></>, container);
+    render(<Deposits/>, container);
   });
-  expect(container).toBeTruthy();
+  expect(container.textContent).toContain("Recent Deposits");
+  expect(container.textContent).toContain("$");
 });
