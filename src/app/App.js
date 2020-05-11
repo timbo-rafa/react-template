@@ -10,6 +10,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducers/rootReducer'
 import AppRoutes from './AppRoutes';
+import { Container } from '@material-ui/core';
 
 const store = createStore(rootReducer)
 
@@ -23,7 +24,9 @@ function App() {
           <SideMenu />
           <main className={classes.content}>
             <div className={classes.appBarSpacer} />
-            <AppRoutes/>
+            <Container maxWidth="lg" className={classes.container}>
+              <AppRoutes/>
+            </Container>
           </main>
         </Router>
       </Provider>
