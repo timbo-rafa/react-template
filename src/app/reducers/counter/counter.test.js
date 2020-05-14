@@ -1,6 +1,4 @@
-import todos from './todos'
-
-import counter, { typeIncrement } from './counter'
+import counter, { typeIncrement, initialState } from './counter'
 
 describe('counter reducer', () => {
   it('should handle initial state', () => {

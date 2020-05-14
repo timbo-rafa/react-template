@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import Title from "../dashboard/Title";
+import Title from "../components/Title";
 import useStyles from '../useStyles';
 import Button from '@material-ui/core/Button'
 
